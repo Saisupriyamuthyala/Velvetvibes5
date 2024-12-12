@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Vibes - Shop All Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="E:/Apex/task1/velvetvibes.html">Home</a></li>
+                <li><a href="E:/Apex/products/products.html">Products</a></li>
+                <li><a href="E:/Apex/contact/contact.html">Contact Us</a></li>
+                <li><a href="E:/Apex/blog.html">BLOG</a></li>
+            </ul>
+        </nav>
+        <div class="cart" id="cart-button">Cart (0)</div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Velvet Vibes</h1>
+            <p>Discover and shop from a wide range of premium cosmetic products!</p>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>All Products</h2>
+        <div class="filters">
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="all">All</option>
+                <option value="makeup">Makeup</option>
+                <option value="skincare">Skincare</option>
+                <option value="fragrances">Fragrances</option>
+            </select>
+
+            <label for="price">Sort by Price:</label>
+            <select id="price">
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+        </div>
+
+        <div class="product-list" id="product-list"></div>
+    </section>
+
+    <!-- Cart Popup -->
+    <div class="cart-popup" id="cart-popup">
+        <h3>Your Cart</h3>
+        <div class="cart-items" id="cart-items"></div>
+        <button id="checkout-button">Checkout</button>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="order-modal">
+        <div class="modal-content">
+            <h3>Order Confirmation</h3>
+            <div id="order-summary"></div>
+            <button id="confirm-order">Confirm Order</button>
+            <button id="cancel-order">Cancel</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Velvet Vibes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvetvibes Product Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Velvetvibes</h1>
+        <p>Explore our selection of aesthetic cosmetics.</p>
+    </header>
+    
+    <section id="listing">
+        <h2>Cosmetic Products</h2>
+        <div class="filters">
+          <label for="priceSort">Sort by Price:</label>
+          <select id="priceSort" onchange="filterAndSortProducts()">
+            <option value="Low-to-High">Low-to-High</option>
+            <option value="High-to-Low">High-to-Low</option>
+          </select>
+    
+          <label for="ratingSort">Sort by Rating:</label>
+          <select id="ratingSort" onchange="filterAndSortProducts()">
+            <option value="Low-to-High">Low-to-High</option>
+            <option value="High-to-Low">High-to-Low</option>
+          </select>
+    
+          <label for="typeFilter">Filter by Category:</label>
+          <select id="typeFilter" onchange="filterAndSortProducts()">
+            <option value="">All</option>
+            <option value="Skin Care">Skin Care</option>
+            <option value="Makeup">Makeup</option>
+            <option value="Hair Care">Hair Care</option>
+            <option value="Fragrance">Fragrance</option>
+          </select>
+        </div>
+        <div class="product-list" id="productList"></div>
+      </section>
+    
+     
+
+    <section id="products" class="product-gallery">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+
+            <!-- Luxury Lipsticks -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/474x/df/30/78/df3078e548b28f1c3981a817b67923f5.jpg" alt="Velvet Luxe Lipstick">
+                <p>Glamora – Velvet Luxe Lipstick</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/db/76/4b/db764b43e420f9f153d6536cffb5fa3a.jpg" alt="Matte Silk Lip Paint">
+                <p>Celestique – Matte Silk Lip Paint</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/736x/65/68/01/6568010a922d992d5396c118c130dc1d.jpg" alt="Rich Ruby Lipstick Collection">
+                <p>Aurora Glow – Rich Ruby Lipstick Collection</p>
+            </div>
+
+            <!-- Eyeshadow Palettes -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/79/71/10/7971100615caf55e22b976a37ed2dd9e.jpg" alt="Mystic Nights Palette">
+                <p>Serene Shades – Mystic Nights Palette</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/7a/e9/1f/7ae91f8afeb758ba83534c073c5d3704.jpg" alt="Petal Glow Eyeshadow Palette">
+                <p>LuxeBloom – Petal Glow Eyeshadow Palette</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/97/91/0e/97910e35aa2a1a251165308d1d3ddc16.jpg" alt="Sunset Dream Eyeshadow Set">
+                <p>OpulentHues – Sunset Dream Eyeshadow Set</p>
+            </div>
+
+            <!-- Foundation and Concealers -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/e8/6f/d7/e86fd7d5c89b72ada65192e3b19b6bae.jpg" alt="Perfect Coverage Foundation">
+                <p>GlowCrest – Perfect Coverage Foundation</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/f1/55/14/f15514aabd7560d1ac85aae75bcc1528.jpg" alt="Natural Finish Concealer">
+                <p>Radiant Essence – Natural Finish Concealer</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/d9/90/98/d990985f643eb22d854223113e31fb09.jpg" alt="Flawless Touch Liquid Foundation">
+                <p>LumiVibe – Flawless Touch Liquid Foundation</p>
+            </div>
+
+            <!-- Blush and Highlighters -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/40/3f/34/403f345725d3ec55a5fdaa06fe66d6f5.jpg" alt="Golden Hour Highlighter">
+                <p>Silk & Shine – Golden Hour Highlighter</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/56/64/03/566403cea65be3af531a4a74e948c357.jpg" alt="Blush Radiance Palette">
+                <p>RoseAura – Blush Radiance Palette</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/8e/31/a2/8e31a2fe5b6e6e8ae7ee9a0b55d507cd.jpg" alt="Luminous Blush Duo">
+                <p>Ethereal Glow – Luminous Blush Duo</p>
+            </div>
+
+            <!-- Mascara and Eyeliners -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/18/2b/b4/182bb4e26f9ab2cbf7d228389d9f9861.jpg" alt="Intense Volume Mascara">
+                <p>Lash Envy – Intense Volume Mascara</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/9c/80/58/9c80580f4ef18c4ea89476af1ce5e7cb.jpg" alt="Precision Liquid Eyeliner">
+                <p>Glimmer Gaze – Precision Liquid Eyeliner</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/ba/fd/51/bafd51b081e29ba91f32e71ca9a9dc19.jpg" alt="Smudge-Proof Gel Eyeliner">
+                <p>Celestial Ink – Smudge-Proof Gel Eyeliner</p>
+            </div>
+
+            <!-- Skincare Essentials -->
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/25/8d/59/258d59c6ae73189becd6953aaead26af.jpg" alt="Hydrating Glow Serum">
+                <p>Pure Harmony – Hydrating Glow Serum</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/b0/da/8e/b0da8ee78981ad66da85bede75e07081.jpg" alt="Soothing Face Mist">
+                <p>Revive Essence – Soothing Face Mist</p>
+            </div>
+            <div class="product-item">
+                <img src="https://i.pinimg.com/564x/fa/a0/ea/faa0ea0505404399d288521cc50a8d12.jpg" alt="Rose Water Skin Toner">
+                <p>Natura Luxe – Rose Water Skin Toner</p>
+            </div>
+
+           
+          
+           
+
+           
+
+        </div>
+    </section>
+</body>
+</html>
